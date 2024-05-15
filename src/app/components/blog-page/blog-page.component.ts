@@ -28,6 +28,7 @@ export class BlogPageComponent implements OnInit, OnDestroy {
           next: (data) => {
             this.blog = data;
             console.log(this.blog);
+            console.log(this.blog[0]);
             this.loading = false; // Set loading to false when data is received
           },
           error: (error) => {
