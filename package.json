@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "test": "ng test",
-    "dev": "npx concurrently \"nodemon backend/server.js\" \"ng serve\"",
+    "dev": "ng serve",
     "prod": "ng build"
   },
   "private": true,

@@ -7,7 +7,7 @@ import { Blog } from '../models/Blog';
   providedIn: 'root'
 })
 export class BlogServiceService {
-  private apiUrl = 'http://localhost:3000/api/blogs/';
+  private apiUrl = '/.netlify/functions/blogs'; // Local or production Netlify function endpoint
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +20,6 @@ export class BlogServiceService {
   }
 
   getBlogByProjectId(projectId: number): Observable<Blog> {
-    console.log(`${this.apiUrl}project/${projectId}`);
-    return this.http.get<Blog>(`${this.apiUrl}project/${projectId}`);
+    return this.http.get<Blog>(`${this.apiUrl}/project/${projectId}`);
   }
 }
