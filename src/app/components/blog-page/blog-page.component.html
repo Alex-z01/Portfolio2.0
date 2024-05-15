@@ -1,4 +1,4 @@
-<div *ngIf="blog; else loadingTemplate">
+<div *ngIf="!loading && blog; else loadingTemplate">
   <div class="blog-header">
     <div class="blog-image" style="background-image: url('{{ blog.image_url }}');"></div>
     <div class="blog-title-container">
