@@ -1,0 +1,11 @@
+# netlify.toml
+
+[build]
+  base = ""
+  publish = "dist/portfolio-2.0"  # Update this with the correct path to your build output directory
+  command = "ng build --prod"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
