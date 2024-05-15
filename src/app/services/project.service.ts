@@ -8,19 +8,15 @@ import { Blog } from '../models/Blog';
   providedIn: 'root'
 })
 export class ProjectService {
-  private apiUrl = '/.netlify/functions/projects'; // Local or production Netlify function endpoint
+  private apiUrl = '/.netlify/functions'; // Local or production Netlify function endpoint
 
   constructor(private http: HttpClient) { }
 
   getProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>(this.apiUrl);
+    return this.http.get<Project[]>(`${this.apiUrl}/projects`);
   }
 
   getProjectById(id: string): Observable<Project> {
-    return this.http.get<Project>(`${this.apiUrl}/${id}`);
-  }
-
-  getBlogByProjectId(projectId: string): Observable<Blog> {
-    return this.http.get<Blog>(`${this.apiUrl}/${projectId}/blog`);
+    return this.http.get<Project>(`${this.apiUrl}/projectById?id=${id}`);
   }
 }
