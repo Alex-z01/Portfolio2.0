@@ -16,10 +16,10 @@ export class BlogServiceService {
   }
 
   getBlogById(id: string): Observable<Blog> {
-    return this.http.get<Blog>(`${this.apiUrl}/blogsById?id=${id}`);
+    return this.http.get<Blog>(`${this.apiUrl}/blogById?id=${id}`);
   }
 
   getBlogByProjectId(projectId: number): Observable<Blog> {
-    return this.http.get<Blog>(`${this.apiUrl}/blogsByProjectId?projectId=${projectId}`);
+    return this.http.get<Blog>(`${this.apiUrl}/blogByProjectId?projectId=${projectId}`);
   }
 }
