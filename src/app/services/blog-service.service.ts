@@ -20,6 +20,7 @@ export class BlogServiceService {
   }
 
   getBlogByProjectId(projectId: number): Observable<Blog> {
+    console.log(this.http.get<Blog>(`${this.apiUrl}/blogByProjectId?projectId=${projectId}`));
     return this.http.get<Blog>(`${this.apiUrl}/blogByProjectId?projectId=${projectId}`);
   }
 }
