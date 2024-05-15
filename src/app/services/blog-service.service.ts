@@ -7,7 +7,7 @@ import { Blog } from '../models/Blog';
   providedIn: 'root'
 })
 export class BlogServiceService {
-  private apiUrl = '/.netlify/functions'; // Local or production Netlify function endpoint
+  private apiUrl = '.netlify/functions'; // Local or production Netlify function endpoint
 
   constructor(private http: HttpClient) { }
 
@@ -16,11 +16,10 @@ export class BlogServiceService {
   }
 
   getBlogById(id: string): Observable<Blog> {
-    return this.http.get<Blog>(`${this.apiUrl}/blogById?id=${id}`);
+    return this.http.get<Blog>(`${this.apiUrl}/blogsById?id=${id}`);
   }
 
   getBlogByProjectId(projectId: number): Observable<Blog> {
-    console.log(this.http.get<Blog>(`${this.apiUrl}/blogByProjectId?projectId=${projectId}`));
-    return this.http.get<Blog>(`${this.apiUrl}/blogByProjectId?projectId=${projectId}`);
+    return this.http.get<Blog>(`${this.apiUrl}/blogsByProjectId?projectId=${projectId}`);
   }
 }
