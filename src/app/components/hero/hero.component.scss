@@ -1,0 +1,51 @@
+.hero-container {
+  width: 100%;
+  height: 50vh; // only a portion of the height
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  background: url('../../../assets/store_capsule_header.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(5px); // slightly blurred backdrop
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // dark tint overlay
+    z-index: 1;
+  }
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Salsa', cursive;
+  text-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+  @media (max-width: 768px) {
+    font-size: 1em; // smaller text size for smaller devices
+    left: 50%; // centered on smaller screens
+    transform: translate(-50%, -50%); // ensure it stays centered
+    width: 90%; // use more of the screen width on smaller devices
+  }
+}
+
+.hero-text h1 {
+  font-size: 3em; // larger font size for h1
+  font-weight: 800; // heavier font weight for h1
+  @media (max-width: 768px) {
+    font-size: 2em; // smaller font size for h1 on smaller devices
+  }
+}
+

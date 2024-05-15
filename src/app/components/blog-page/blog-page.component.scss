@@ -1,0 +1,61 @@
+.blog-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Extend across the width of the screen */
+  height: 30vh; /* Reduced height to take up less vertical space */
+  position: relative;
+  overflow: hidden; /* Prevents any overflow from the blur effect */
+
+  .blog-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Apply blur effect */
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: 1;
+    }
+  }
+}
+
+.blog-title-container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure the title is above the blurred image */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow to text for better readability */
+
+  .blog-author {
+    margin-top: 10px; /* Added slight top margin to the author style */
+  }
+}
+.blog-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%; /* Limiting the maximum width to make content less wide */
+  margin: 80px auto; /* Centering the container */
+  @media (max-width: 768px) {
+    max-width: 95%; /* More width on smaller screens */
+    margin: 40px auto; /* Reduced margin on smaller screens */
+  }
+}
+
+.blog-content {
+  text-align: center;
+  font-family: 'Nunito', sans-serif; /* Changed to a cleaner, more modern font */
+  font-size: 18px;
+  line-height: 2; /* Increased line spacing for better readability */
+}
+

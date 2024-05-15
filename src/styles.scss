@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Salsa&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles for a game developer's portfolio */
+body {
+  background-color: #121212; /* Dark background for a gaming aesthetic */
+  color: #e0e0e0; /* Light grey text for readability */
+  font-family: 'Salsa', sans-serif; /* Clean, modern font */
+}
+
+/* Ensure all headings have a consistent base style */
+h1, h2, h3, h4, h5, h6 {
+  color: #e0e0e0; /* Consistent text color for readability */
+}
+
+/* Basic styling for the main layout components */
+router-outlet, footer {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  text-align: center;
+  font-weight: 500;
+  color: #121212;
+}

@@ -1,0 +1,16 @@
+<div class="projects">
+  <h1>Projects</h1>
+  
+  <ul class="project-list">
+    <li *ngFor="let project of projects" (click)="onProjectClick(project.id)">
+      <a [routerLink]="['/blog', project.id]">
+        <img [src]="project.image_url" alt="{{ project.title }}">
+        <div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.tags.join(' | ') }}</p>
+          <p>Last updated: {{ project.created_at | date:'mediumDate' }}</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

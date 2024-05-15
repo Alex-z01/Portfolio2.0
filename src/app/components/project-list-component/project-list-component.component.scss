@@ -1,0 +1,66 @@
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.project-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.project-list li {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-list li:hover {
+  transform: translateY(-5px);
+}
+
+.project-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.project-list div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: 'Salsa', sans-serif; /* Clearer font for readability */
+}
+
+.project-list li:hover img {
+  opacity: 0.3;
+}
+
+.project-list li:hover div {
+  opacity: 1;
+}

@@ -1,0 +1,15 @@
+<div *ngIf="blog; else loadingTemplate">
+  <div class="blog-header">
+    <div class="blog-image" style="background-image: url('{{ blog.image_url }}');"></div>
+    <div class="blog-title-container">
+      <h1 class="blog-title">{{ blog.title }}</h1>
+      <h2 class="blog-author">{{ blog.author }}</h2>
+    </div>
+  </div>
+  <div class="blog-content-container">
+    <p class="blog-content">{{ blog.content }}</p>
+  </div>
+</div>
+<ng-template #loadingTemplate>
+  <p>Loading...</p>
+</ng-template>
