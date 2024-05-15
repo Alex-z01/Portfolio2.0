@@ -7,7 +7,7 @@ import { Blog } from '../models/Blog';
   providedIn: 'root'
 })
 export class BlogServiceService {
-  private apiUrl = '/.netlify/functions/'; // Local or production Netlify function endpoint
+  private apiUrl = '/.netlify/functions'; // Local or production Netlify function endpoint
 
   constructor(private http: HttpClient) { }
 
