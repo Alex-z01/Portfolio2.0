@@ -27,6 +27,7 @@ export class BlogPageComponent implements OnInit, OnDestroy {
         this.blogService.getBlogByProjectId(+projectId).subscribe({
           next: (data) => {
             this.blog = data;
+            console.log(this.blog);
             this.loading = false; // Set loading to false when data is received
           },
           error: (error) => {
