@@ -3,7 +3,7 @@
 [build]
   base = ""
   publish = "dist/portfolio-2.0"  # Update this with the correct path to your build output directory
-  command = "ng build --prod"
+  command = "ng build --configuration production"
 
 [[redirects]]
   from = "/*"
